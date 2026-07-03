@@ -18,6 +18,7 @@ import lombok.ToString;
 public class SubscriptionConfirmationRequested extends PojaEvent {
   private UUID userId;
   private UUID courseId;
+  private String email;
 
   @Override
   public Duration maxConsumerDuration() {
