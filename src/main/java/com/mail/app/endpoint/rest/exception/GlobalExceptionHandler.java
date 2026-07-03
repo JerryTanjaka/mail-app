@@ -1,4 +1,4 @@
-package com.mail.app.endpoint.rest.controller.exception;
+package com.mail.app.endpoint.rest.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
