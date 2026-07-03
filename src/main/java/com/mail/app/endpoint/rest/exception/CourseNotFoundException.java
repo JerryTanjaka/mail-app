@@ -1,4 +1,4 @@
-package com.mail.app.endpoint.rest.controller.exception;
+package com.mail.app.endpoint.rest.exception;
 
 import java.util.UUID;
 
