@@ -33,7 +33,13 @@ public class SubscriptionController {
 
     var user = userRepository.findById(userId).orElseThrow();
 
-    eventProducer.accept(List.of(SendEmailRequested.builder().to(user.getEmail()).build()));
+    eventProducer.accept(
+        List.of(
+            SendEmailRequested.builder()
+                .to(user.getEmail())
+                .userId(userId)
+                .courseId(request.getCourseId())
+                .build()));
 
     return ResponseEntity.status(HttpStatus.CREATED)
         .body(new SubscriptionResponse(subscriptionId, userId, request.getCourseId()));

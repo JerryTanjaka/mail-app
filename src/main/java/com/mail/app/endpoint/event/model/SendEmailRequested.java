@@ -1,6 +1,7 @@
 package com.mail.app.endpoint.event.model;
 
 import java.time.Duration;
+import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +17,8 @@ import lombok.ToString;
 @ToString
 public class SendEmailRequested extends PojaEvent {
   private String to;
+  private UUID userId;
+  private UUID courseId;
 
   @Override
   public Duration maxConsumerDuration() {
